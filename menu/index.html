@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Honden</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">
+    <style>
+      #toggleMenu:checked ~ main {
+        margin-left: 10em;
+      }
+
+      #toggleLabel::before {
+        content: "\2630";
+        cursor: pointer;
+      }
+
+      #toggleMenu:checked ~ main  #toggleLabel::before {
+        content: "\2715";
+      }
+
+      nav {
+        position: fixed;
+      }
+
+      main {
+        position: absolute;
+        margin-left: 0;
+        transition: margin-left .6s cubic-bezier(.17, .67, .83, 1.36);
+      }
+
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="toggleMenu">
+    <nav>
+      <h4>menu</h4>
+      <ul>
+        <li><a href="index.html" class="actief">honden</a></li>
+        <li><a href="chimp.html" >Chimpansees</a></li>
+        <li><a href="oli.html">Olifanten</a></li>
+        <li><a href="leeuw.html">leeuw</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <label for="toggleMenu" id="toggleLabel"></label>
+      <h1>Honden</h1>
+      <p><img src="ho.jpg" alt="logo"></p>
+      <p>Als je aan mensen vraagt wat hun lievelingsdier is, noemen veel mensen de hond. Honden zijn namelijk niet alleen lieve en mooie beesten, maar ook erg geschikt als huisdier. Er zijn erg veel verschillende soorten honden, van allerlei verschillende rassen. In deze spreekbeurt over honden kom je meer te weten over de kenmerken van honden, de gewoonten en de verschillende hondenrassen die er zijn.</p>
+
+
+      <footer>
+        <div id="validatie">
+          <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+              <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+              <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+          </a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

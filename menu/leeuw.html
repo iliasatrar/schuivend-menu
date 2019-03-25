@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Leeuw</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">
+    <style>
+      #toggleMenu:checked ~ nav {
+        margin-right: 0em;
+        z-index: 1;
+      }
+
+      #toggleLabel::after {
+        content: "\2630";
+        cursor: pointer;
+        float: right;
+      }
+
+      #toggleMenu:checked ~ main  #toggleLabel::after {
+        content: "\2715";
+        margin-right: 5em;
+        transition: margin-right .6s cubic-bezier(.17, .67, .83, 1.36);
+      }
+
+      nav {
+        position: fixed;
+        background: #333;
+        height: 100vh;
+        margin-right: -10em;
+        transition: margin-right .6s cubic-bezier(.17, .67, .83, 1.36);
+        right: 0;
+      }
+
+      main {
+        position: absolute;
+        margin-right: 0;
+        transition: margin-right .6s cubic-bezier(.17, .67, .83, 1.36);
+      }
+
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="toggleMenu">
+    <nav>
+      <h4>menu</h4>
+      <ul>
+        <li><a href="index.html">honden</a></li>
+        <li><a href="chimp.html">Chimpansees</a></li>
+        <li><a href="oli.html">Olifanten</a></li>
+        <li><a href="leeuw.html" class="actief" >leeuw</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <label for="toggleMenu" id="toggleLabel"></label>
+      <h1>Leeuw</h1>
+      <p><img src="le.jpg" alt="logo"></p>
+      <p>De leeuw is een groot roofdier. Hij heeft een soepel lichaam waarmee hij vele dingen kan. Ook kennen we de leeuw door zijn kracht en woest gedrag, daarom noemen we de leeuw ook wel de “Koning de dieren”. De leeuw behoort bij de katachtige. Die katten familie kun je in twee groepen delen: de kleine en de grote katten bijv. poes/ tijger. Ze hebben dus vele dingen gemeen, een ruwe tong kunnen hun nagels intrekken enz. De leeuw is een zoogdier met een mooie vacht, het zijn goede jagers. Zijn sterk gespierde lichaam heeft een flexibele ruggengraat, maar de staart is een heel belangrijk onderdeel van zijn lichaam. Met de staart houd hij zich in balans of hij nu rent, loopt, klimt of zwemt. Zwemmen doet hij alleen in een noodgeval, want net zoals de kat houd hij niet van water.</p>
+
+
+      <footer>
+        <div id="validatie">
+          <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+              <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+              <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+          </a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

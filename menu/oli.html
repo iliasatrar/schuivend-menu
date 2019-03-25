@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Olifanten</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">
+    <style>
+      #toggleMenu:checked ~ main {
+        margin-left: 10em;
+      }
+
+      #toggleMenu:checked ~ nav {
+        margin-left: 0;
+      }
+
+      #toggleLabel::before {
+        content: "\2630";
+        cursor: pointer;
+      }
+
+      #toggleMenu:checked ~ main  #toggleLabel::before {
+        content: "\2715";
+      }
+
+      nav {
+        position: fixed;
+        margin-left: -10em;
+        transition: margin-left .6s cubic-bezier(.17, .67, .83, 1.36);
+      }
+
+      main {
+        position: absolute;
+        margin-left: 0;
+        transition: margin-left .6s cubic-bezier(.17, .67, .83, 1.36);
+      }
+
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="toggleMenu">
+    <nav>
+      <h4>menu</h4>
+      <ul>
+        <li><a href="index.html">honden</a></li>
+        <li><a href="chimp.html" >Chimpansees</a></li>
+        <li><a href="oli.html" class="actief" >Olifanten</a></li>
+        <li><a href="leeuw.html">leeuw</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <label for="toggleMenu" id="toggleLabel"></label>
+      <h1>Olifanten</h1>
+      <p><img src="ol.jpg" alt="logo"></p>
+      <p>Alleen olifanten hebben een echte slurf. Het is een heel bijzonder lichaamsdeel. Een slurf bestaat uit tienduizenden spiertjes, waardoor hij erg makkelijk te bewegen is en erg krachtig is. Een olifant kan er een boomstam mee optillen, maar ook een muntstuk. Wat is nu eigenlijk een slurf? Eigenlijk is een slurf in de loop van de jaren ontwikkeld uit de neus en de bovenlip van de dieren. Waarvoor wordt de slurf eigenlijk gebruikt?
+De slurf is ten eerste een grijparm om zware,lichte kleine en grote dingen op te tillen. Olifanten grijpen voedsel beet met hun slurf en stoppen het dan in hun mond. Als ze willen drinken zuigen ze met hun slurf water op en spuiten dat in hun mond. Ten tweede is de slurf een soort douche. De olifant moet zijn huid geregeld met water en daarna met stof of zand besproeien. Ten derde is het een middel om andere dieren mee te slaan of te aaien.
+Afrikaanse babyolifant trompettert(Zuid-Afrika) Ten vierde wordt de slurf gebruikt om geluiden te maken, maar het meeste kunnen wij niet horen. Ten vijfde is de slurf ook gewoon een neus en ze kunnen daarmee heel goed ruiken.</p>
+
+
+      <footer>
+        <div id="validatie">
+          <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+              <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+              <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+          </a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

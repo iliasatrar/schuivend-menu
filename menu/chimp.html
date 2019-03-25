@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chimpansees</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">
+    <style>
+      #toggleMenu:checked ~ nav {
+        margin-left: 0em;
+        z-index: 1;
+      }
+
+      #toggleLabel::after {
+        content: "\2630";
+        cursor: pointer;
+      }
+
+      #toggleMenu:checked ~ main  #toggleLabel::after {
+        content: "\2715";
+        margin-left: 5em;
+        transition: margin-left .6s cubic-bezier(.17, .67, .83, 1.36);
+      }
+
+      nav {
+        position: fixed;
+        background: #333;
+        height: 100vh;
+        margin-left: -10em;
+        transition: margin-left .6s cubic-bezier(.17, .67, .83, 1.36);
+      }
+
+      main {
+        position: absolute;
+        margin-left: 0;
+        transition: margin-left .6s cubic-bezier(.17, .67, .83, 1.36);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="toggleMenu">
+    <nav>
+      <h4>menu</h4>
+      <ul>
+        <li><a href="index.html">honden</a></li>
+        <li><a href="chimp.html"  class="actief">Chimpansees</a></li>
+        <li><a href="oli.html">Olifanten</a></li>
+        <li><a href="leeuw.html">leeuw</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <label for="toggleMenu" id="toggleLabel"></label>
+      <h1>Chimpansees</h1>
+      <p><img src="chimp.jpg" alt="logo"></p>
+      <p>Chimpansees leven in de tropische bossen van Afrika. Zij zijn kleiner, luidruchtiger, beweeglijker en sneller opgewonden dan gorilla’s. Ze leven gewoonlijk in gemengde groepen van niet meer dan twintig. Chimpansees hebben evenals de andere mensapen geen staart. Gewoonlijk lopen ze op handen en voeten, maar ze kunnen net als de andere apen rechtop lopen. De chimpansees zijn erg goed in klimmen en snel in lopen. Van alle apen zijn de chimpansees het intelligentst. Als ze volwassen zijn worden ze vaak woest en vernielzuchtig. Zoals alle apen zijn ze niet geschikt als huisdier. Chimpansees eten hoofdzakelijk vruchten, bessen en termieten (insecten). Soms doden ze andere dieren, ook wel apen en eten ze op. Elke nacht opnieuw maken ze binnen vijf minuten een nest om in te slapen.</p>
+
+
+      <footer>
+        <div id="validatie">
+          <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+              <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+              <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+          </a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
